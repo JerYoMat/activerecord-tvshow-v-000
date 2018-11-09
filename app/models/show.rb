@@ -7,4 +7,8 @@ class Show < ActiveRecord::Base
     max = Show.maximum(:rating)
       Show.where("rating = #{max}")[0]
   end 
+  
+  def self.lowest_rating 
+    
+  end 
 end 
