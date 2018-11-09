@@ -7,6 +7,10 @@ class Show < ActiveRecord::Base
     max = Show.maximum(:rating)
       Show.where("rating = #{max}")[0]
   end 
+  def self.lowest_rating 
+  Show.minimum(:rating)
+  end 
+  
   
   def self.least_popular_show
      min = Show.minimum(:rating)
